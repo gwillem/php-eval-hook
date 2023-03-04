@@ -32,6 +32,9 @@ A precompiled extension can be downloaded from [releases](https://github.com/ext
 
     $ make
 
+    # test: should create eval-001.php with echo Hello World
+    $ php -d extension=$PWD/modules/evalhook.so -r 'eval(base64_decode("ZWNobyAnSGVsbG8gV29ybGRcbic7"));'
+
     $ make install
     Installing shared extensions:     /usr/lib/php/20170718/
     ```
